@@ -20,6 +20,10 @@ what missing:
 **how to start:**
 
 ``
+yarn
+``
+
+``
 ng serve
 ``
 
@@ -36,6 +40,10 @@ Currently it's just a mock server - just for storing orders from the frontned.
 Please consider it as a "black box" I only  created the basic controllers and service without care, in order to make mocked data for frontend more dynamic.
 
 **how to start:**
+
+``
+yarn
+``
 
 ``
 yarn start
