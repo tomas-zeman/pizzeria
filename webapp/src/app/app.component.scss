@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+}
+app-offer {
+  flex: 1;
+}
+
+app-cart-overview {
+  width: 20%;
+  background: #eaeaea;
+  position: static;
+}
+
+.overview-position-left {
+  flex-direction: row-reverse;
+}
+
+.overview-position-right {
+  flex-direction: row;
+}

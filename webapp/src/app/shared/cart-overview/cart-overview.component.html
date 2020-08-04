@@ -1,0 +1,53 @@
+<div class="cart-overwiew__wrapper">
+
+  <div class="cart-overwiew__items" *ngIf="cartItems && cartItems.length > 0; else noItems">
+    <h3>
+      <i class="fas fa-receipt"></i> Cart items:
+    </h3>
+    <table
+    class="cart-overwiew__items-table">
+      <tr>
+        <th>item</th>
+        <th>qt</th>
+        <th>price</th>
+        <th *ngIf="showActions"></th>
+      </tr>
+      <tr *ngFor="let item of cartItems">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}x</td>
+        <td>{{ item.price * item.quantity | currency }}</td>
+        <td *ngIf="showActions">
+          <app-button
+            (click)="removeFromCart(item)"
+            color="gray"
+            type="mini">-</app-button>
+          <app-button
+            (click)="addToCart(item)"
+            color="gray"
+            type="mini">+</app-button>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <div>
+      <span>Total:</span><span> {{ countCartTotal() | currency }}</span>
+    </div>
+    <div *ngIf="showActions" class="cart-overwiew__button-wrapper flex align-center justify-center mt-1">
+      <app-button
+        (click)="onOrder()"
+        [disabled]="false"
+        type="full"
+        color="green"
+      >Order</app-button>
+      <app-button (click)="deleteCart()">
+        Clear cart
+      </app-button>
+    </div>
+  </div>
+  <ng-template #noItems>
+    <div class="cart-overwiew__no-items">
+      <span class="cart-overwiew__no-items-heading">Your cart is empty</span>
+      <span class="cart-overwiew__no-items-icon"><i class="fas fa-shopping-basket"></i></span>
+    </div>
+  </ng-template>
+</div>

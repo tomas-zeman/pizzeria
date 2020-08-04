@@ -1,0 +1,33 @@
+<app-layout>
+  <div class="offer__heading flex justify-center align-center">
+    <h1>Submit order</h1>
+  </div>
+  <div>
+    <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
+      <div>
+        <label for="order-form-name">
+          <span>Name:</span>
+          <input id="order-form-name" type="text" formControlName="name">
+        </label>
+      </div>
+
+      <div>
+        <label for="order-form-surname">
+          <span>Surname:</span>
+          <input id="order-form-surname" type="text" formControlName="surname">
+        </label>
+      </div>
+
+      <div>
+        <label for="order-form-phone">
+          <span>Phone:</span>
+          <input id="order-form-phone" type="text" formControlName="phone">
+        </label>
+      </div>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</app-layout>
+
+

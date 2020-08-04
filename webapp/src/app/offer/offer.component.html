@@ -1,0 +1,23 @@
+<div class="offer__heading flex justify-center align-center">
+  <h1>Offer</h1>
+  <div class="offer__heading-cover"></div>
+</div>
+<app-layout>
+  <div *ngIf="items && items.length > 0; else noData" class="offer__section-wrapper">
+    <app-section
+      *ngFor="let section of items"
+      class="offer__section mb-half">
+      <h2>{{ section.kind }}</h2>
+      <app-offer-card
+        *ngFor="let item of section.items"
+        [cartData]="getCartDataForItem(item.id)"
+        [addToCartFn]="bindAddToCart()"
+        [offer]="item"></app-offer-card>
+    </app-section>
+  </div>
+  <ng-template #noData>
+    No data, sorry...
+  </ng-template>
+</app-layout>
+
+

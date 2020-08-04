@@ -1,0 +1,5 @@
+<app-header></app-header>
+<div class="wrapper" [class]="['overview-position-' + cartOverviewSettings.position]">
+  <router-outlet></router-outlet>
+  <app-cart-overview *ngIf="cartOverviewSettings.display" [showActions]="cartOverviewSettings.actions"></app-cart-overview>
+</div>

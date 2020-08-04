@@ -1,0 +1,3 @@
+<button [disabled]="disabled" (click)="onClick()" class="button" [ngClass]="['button-' + color, 'type-' + type]">
+  <span><i *ngIf="icon" class="pr-half" [ngClass]="'fas fa-' + icon"></i><ng-content></ng-content></span>
+</button>

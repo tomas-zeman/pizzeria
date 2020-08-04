@@ -1,0 +1,29 @@
+.offer__heading {
+  height: 20em;
+  background-image: url('../../assets/images/pizza-cover.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+  .offer__heading-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: .6;
+    z-index: 0;
+    content: "";
+  }
+
+  h1 {
+    color: #dad7d5;
+    font-size: 3em;
+    letter-spacing: 5px;
+    z-index: 1;
+  }
+}
+.offer__section-wrapper {
+  padding: 10px;
+}

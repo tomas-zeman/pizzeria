@@ -1,0 +1,24 @@
+<div class="offer-card p-1 mb-half">
+  <div>
+    <h3>{{ offer.name }}</h3>
+    <p>
+      {{ offer.description }}
+    </p>
+  </div>
+  <div *ngIf="!cartData; else editQuantity">
+    <app-button
+      color="red"
+      [disabled]="false"
+      (click)="addToCart(offer)"
+      icon="shopping-basket">Add to cart</app-button>
+  </div>
+  <ng-template #editQuantity>
+    <app-button
+      color="green"
+      [disabled]="true"
+      icon="check-circle"
+    >
+      In cart
+    </app-button>
+  </ng-template>
+</div>

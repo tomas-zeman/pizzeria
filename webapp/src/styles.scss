@@ -1,0 +1,130 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin: 0 0 .5rem;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* paddings and margins */
+.p-1 {
+  padding: 1rem;
+}
+.p-half {
+  padding: .5rem;
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+.pl-half {
+  padding-left: .5rem;
+}
+.pr-1 {
+  padding-right: 1rem;
+}
+.pr-half {
+  padding-right: .5rem;
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+.pt-half {
+  padding-top: .5rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.pb-half {
+  padding-bottom: .5rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.mb-half {
+  margin-bottom: .5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
