@@ -1,7 +1,7 @@
-#PIZZERIA
+# PIZZERIA
 Just a simple sample app 
 
-##webapp - frontend
+## webapp - frontend
 Lets you order a pizza and store an order in the mock backend
 
 done so far: 
